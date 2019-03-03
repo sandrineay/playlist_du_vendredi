@@ -1,1 +1,10 @@
 <h1>Featured</h1>
+
+<div class="featured-card">
+  <%= @featured_playlist.title %>
+  <ul>
+    <% @featured_playlist.songs.each do |song| %>
+      <li><%= song.title %></li>
+    <% end %>
+  </ul>
+</div>
