@@ -8,10 +8,10 @@
   <div class="navbar-pdv-right hidden-xs hidden-sm">
 
     <!-- Links when logged in -->
-    <%= link_to "La playlist du vendredi", "#", class: "navbar-pdv-item navbar-pdv-link" %>
-    <%= link_to "Historique", "#", class: "navbar-pdv-item navbar-pdv-link" %>
-    <%= link_to "Hors-série", "#", class: "navbar-pdv-item navbar-pdv-link" %>
-    <%= link_to "À propos", "#", class: "navbar-pdv-item navbar-pdv-link" %>
+    <%= link_to "La playlist du vendredi", root_path, class: "navbar-pdv-item navbar-pdv-link" %>
+    <%= link_to "Historique", playlists_path, class: "navbar-pdv-item navbar-pdv-link" %>
+    <%= link_to "Hors-série", hors_serie_path, class: "navbar-pdv-item navbar-pdv-link" %>
+    <%= link_to "À propos", a_propos_path, class: "navbar-pdv-item navbar-pdv-link" %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
@@ -19,9 +19,10 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-pdv-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li><%= link_to "La playlist du vendredi", root_path %></li>
+        <li><%= link_to "Historique", playlists_path %></li>
+        <li><%= link_to "Hors-série", hors_serie_path %></li>
+        <li><%= link_to "À propos", a_propos_path %></li>
       </ul>
     </div>
   </div>
