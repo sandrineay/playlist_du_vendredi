@@ -10,10 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_03_113437) do
+ActiveRecord::Schema.define(version: 2019_03_03_122334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "authorings", force: :cascade do |t|
+    t.bigint "song_id"
+    t.bigint "artist_id"
+    t.index ["artist_id"], name: "index_authorings_on_artist_id"
+    t.index ["song_id"], name: "index_authorings_on_song_id"
+  end
+
+  create_table "belongings", force: :cascade do |t|
+    t.bigint "playlist_id"
+    t.bigint "category_id"
+    t.bigint "song_id"
+    t.index ["category_id"], name: "index_belongings_on_category_id"
+    t.index ["playlist_id"], name: "index_belongings_on_playlist_id"
+    t.index ["song_id"], name: "index_belongings_on_song_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "playlists", force: :cascade do |t|
+    t.string "title"
+    t.boolean "featured"
+    t.boolean "special"
+  end
+
+  create_table "songs", force: :cascade do |t|
+    t.string "title"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +61,9 @@ ActiveRecord::Schema.define(version: 2019_03_03_113437) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "authorings", "artists"
+  add_foreign_key "authorings", "songs"
+  add_foreign_key "belongings", "categories"
+  add_foreign_key "belongings", "playlists"
+  add_foreign_key "belongings", "songs"
 end
