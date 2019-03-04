@@ -1,0 +1,30 @@
+.featured-card {
+  max-width: 800px;
+  h2 {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.featured_playlist_song {
+  padding: 10px 0;
+  max-width: 100%;
+  display: flex;
+  border-bottom: solid 1px rgba(255,255,255,0.3);
+}
+
+.song-category {
+  flex-basis: 40%;
+}
+
+.song-category-name {
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.song-details {
+  font-size: 16px;
+}

@@ -54,17 +54,17 @@ playlist2 = Playlist.create(title: "La Playlist du Vendredi #2", featured: true,
 puts "#{Playlist.count} playlists created."
 
 # Create categories
-Category.create(name: "Le Cu-culte")
-Category.create(name: "L’Uptodate #1")
-Category.create(name: "Le Tv/Movie Related")
-Category.create(name: "Le Friday Night Fever")
-Category.create(name: "Le Frenchie but Chic")
-Category.create(name: "Le Concert de la Semaine")
-Category.create(name: "Le Guilty Pleasure")
-Category.create(name: "Le Hit du Grenier")
-Category.create(name: "Le Tout nu !")
-Category.create(name: "L’Uptodate #2")
-Category.create(name: "Jean-Michel à côté")
+Category.create(name: "Le Cu-culte", "⭐️")
+Category.create(name: "L’Uptodate #1", "👌")
+Category.create(name: "Le Tv/Movie Related", "🍿")
+Category.create(name: "Le Friday Night Fever", "🕺")
+Category.create(name: "Le Frenchie but Chic", "🍷")
+Category.create(name: "Le Concert de la Semaine", "🎤")
+Category.create(name: "Le Guilty Pleasure", "🍩")
+Category.create(name: "Le Hit du Grenier", "👵🏻")
+Category.create(name: "Le Tout nu !", "🍑")
+Category.create(name: "L’Uptodate #2", "👌")
+Category.create(name: "Jean-Michel à côté", "👨‍🎤")
 puts "#{Category.count} categories created."
 
 # Create connexions between playlists, songs and categories

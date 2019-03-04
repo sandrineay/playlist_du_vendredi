@@ -1,16 +1,22 @@
-<h1>Featured</h1>
-
-<div class="featured-card">
-  <%= @featured_playlist.title %>
-  <ul>
+<div class="container">
+  <div class="featured-card mt-60 mb-60">
+    <h2><%= @featured_playlist.title %></h2>
     <% @featured_playlist.songs.each do |song| %>
-      <li><%= song.belongings.find_by(playlist: @featured_playlist).category.name %>: <%= song.title %> - <%= song.artists.map(&:name).join(', ') %></li>
+      <div class="featured_playlist_song">
+        <% category = song.belongings.find_by(playlist: @featured_playlist).category %>
+        <div class="song-category">
+          <%= category.emoji %><span class="ml-20 song-category-name"><%= category.name %></span>
+        </div>
+        <div class="song-details">
+          <%= song.title %> <span class="text-italic-light">by</span> <%= song.artists.map(&:name).join(', ') %>
+        </div>
+      </div>
     <% end %>
-  </ul>
-</div>
+  </div>
 
-<div class="playlists">
-  <% @latest_playlists.each do |playlist| %>
-    <%= playlist.title %>
-  <% end %>
+  <div class="playlists">
+    <% @latest_playlists.each do |playlist| %>
+      <%= playlist.title %>
+    <% end %>
+  </div>
 </div>
