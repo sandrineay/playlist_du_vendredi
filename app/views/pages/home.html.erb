@@ -4,7 +4,7 @@
   <%= @featured_playlist.title %>
   <ul>
     <% @featured_playlist.songs.each do |song| %>
-      <li><%= song.title %></li>
+      <li><%= song.belongings.find_by(playlist: @featured_playlist).category.name %>: <%= song.title %> - <%= song.artists.map(&:name).join(', ') %></li>
     <% end %>
   </ul>
 </div>

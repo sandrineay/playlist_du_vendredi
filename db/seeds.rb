@@ -5,6 +5,10 @@ Artist.delete_all
 Playlist.delete_all
 Category.delete_all
 
+# Playlist #1
+
+puts "Creating Playlist #1."
+
 # Song creation
 Song.create(title: "Levania")
 Song.create(title: "Tumbling Lights")
@@ -45,7 +49,8 @@ Authoring.create(song: Song.find_by(title: "Happy Birthday, Johnny - piano versi
 puts "#{Authoring.count} connexions created between songs and artists."
 
 # Create playlists
-Playlist.create(title: "La Playlist du Vendredi #1", featured: true, special: false)
+Playlist.create(title: "La Playlist du Vendredi #1", featured: false, special: false)
+playlist2 = Playlist.create(title: "La Playlist du Vendredi #2", featured: true, special: false)
 puts "#{Playlist.count} playlists created."
 
 # Create categories
@@ -74,4 +79,34 @@ Belonging.create(song: Song.find_by(title: "Total Eclipse Of The Heart"), catego
 Belonging.create(song: Song.find_by(title: "Dance Yrself Clean"), category: Category.find_by(name: "Le Friday Night Fever"), playlist: Playlist.find_by(title: "La Playlist du Vendredi #1"))
 Belonging.create(song: Song.find_by(title: "Happy Birthday, Johnny - piano version"), category: Category.find_by(name: "L’Uptodate #2"), playlist: Playlist.find_by(title: "La Playlist du Vendredi #1"))
 puts "#{Belonging.count} connexions created between songs, categories and playlists."
+
+# Playlist #2
+
+puts "Creating Playlist #2."
+
+Authoring.create(song: Song.create(title: "Death In Midsummer"), artist: Artist.create(name: "Deerhunter"))
+Authoring.create(song: Song.create(title: "So You’ll Aim Toward the Sky"), artist: Artist.create(name: "Grandaddy"))
+Authoring.create(song: Song.create(title: "Perfecto"), artist: Artist.create(name: "Hotel"))
+Authoring.create(song: Song.create(title: "Winning"), artist: Artist.create(name: "Santana"))
+Authoring.create(song: Song.create(title: "Crush"), artist: Artist.create(name: "Cigarettes After Sex"))
+Authoring.create(song: Song.create(title: "MmmBop"), artist: Artist.create(name: "Hanson"))
+Authoring.create(song: Song.create(title: "La Forêt"), artist: Artist.create(name: "Lescop"))
+Authoring.create(song: Song.create(title: "Old Pine"), artist: Artist.create(name: "Ben Howard"))
+Authoring.create(song: Song.create(title: "You & Me"), artist: Artist.create(name: "Disclosure"))
+Authoring.create(song: Song.create(title: "Future Hates Me"), artist: Artist.create(name: "The Beths"))
+puts "#{Authoring.count} connexions created between #{Song.count} songs and #{Artist.count} artists."
+
+Belonging.create(song: Song.find_by(title: "Death In Midsummer"), category: Category.find_by(name: "L’Uptodate #1"), playlist: playlist2)
+Belonging.create(song: Song.find_by(title: "So You’ll Aim Toward the Sky"), category: Category.find_by(name: "Le Tv/Movie Related"), playlist: playlist2)
+Belonging.create(song: Song.find_by(title: "Winning"), category: Category.find_by(name: "Le Hit du Grenier"), playlist: playlist2)
+Belonging.create(song: Song.find_by(title: "Perfecto"), category: Category.find_by(name: "Le Frenchie but Chic"), playlist: playlist2)
+Belonging.create(song: Song.find_by(title: "La Forêt"), category: Category.find_by(name: "Jean-Michel à côté"), playlist: playlist2)
+Belonging.create(song: Song.find_by(title: "Old Pine"), category: Category.find_by(name: "Le Concert de la Semaine"), playlist: playlist2)
+Belonging.create(song: Song.find_by(title: "Crush"), category: Category.find_by(name: "Le Tout nu !"), playlist: playlist2)
+Belonging.create(song: Song.find_by(title: "MmmBop"), category: Category.find_by(name: "Le Guilty Pleasure"), playlist: playlist2)
+Belonging.create(song: Song.find_by(title: "You & Me"), category: Category.find_by(name: "Le Friday Night Fever"), playlist: playlist2)
+Belonging.create(song: Song.find_by(title: "Future Hates Me"), category: Category.find_by(name: "L’Uptodate #2"), playlist: playlist2)
+puts "#{Belonging.count} connexions created between songs, #{Category.count} categories and #{Playlist.count} playlists."
+
+
 
