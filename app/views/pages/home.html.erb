@@ -1,17 +1,31 @@
 <div class="container">
-  <div class="featured-card mt-60 mb-60">
-    <h2><%= @featured_playlist.title %></h2>
-    <% @featured_playlist.songs.each do |song| %>
-      <div class="featured_playlist_song">
-        <% category = song.belongings.find_by(playlist: @featured_playlist).category %>
-        <div class="song-category">
-          <%= category.emoji %><span class="ml-20 song-category-name"><%= category.name %></span>
+  <div class="featured-card-container mb-60">
+    <div class="featured-card mt-60">
+      <h2><%= @featured_playlist.title %></h2>
+      <% @featured_playlist.songs.each do |song| %>
+        <div class="featured_playlist_song">
+          <% category = song.belongings.find_by(playlist: @featured_playlist).category %>
+          <div class="song-category">
+            <%= category.emoji %><span class="ml-20 song-category-name"><%= category.name %></span>
+          </div>
+          <div class="song-details">
+            <%= song.title %> <span class="text-italic-light">by</span> <%= song.artists.map(&:name).join(', ') %>
+          </div>
         </div>
-        <div class="song-details">
-          <%= song.title %> <span class="text-italic-light">by</span> <%= song.artists.map(&:name).join(', ') %>
+      <% end %>
+    </div>
+    <div class="players mt-80">
+      <div class="player-iframes">
+        <div class="player-iframe" id="spotify">
+          <h2 class="text-center">Listen with <i class="fab fa-spotify"></i></h2>
+          <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aw5azliprnz2bzz9ifkuodxbgj%3Aplaylist%3A1nXiRFgarZ88Arf85kz9Gf" width="300" height="300" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+        <div class="player-iframe hidden" id="deezer">
+          <h2>Listen on <i class="fab fa-spotify"></i></h2>
+          <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=playlist&id=5159360524&app_id=1" width="300" height="300"></iframe>
         </div>
       </div>
-    <% end %>
+    </div>
   </div>
 
   <div class="playlists">

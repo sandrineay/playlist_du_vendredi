@@ -1,5 +1,10 @@
+.featured-card-container {
+  display: flex;
+  height: 80vh;
+}
+
 .featured-card {
-  max-width: 800px;
+  flex: 1 0 auto;
   h2 {
     font-weight: bold;
     font-size: 40px;
@@ -27,4 +32,20 @@
 
 .song-details {
   font-size: 16px;
+}
+
+.players {
+  padding: 0 0 0 80px;
+  height: 100%;
+}
+
+.player-iframes {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.player-iframe h2 {
+  font-size: 24px;
+  padding-bottom: 20px;
 }
