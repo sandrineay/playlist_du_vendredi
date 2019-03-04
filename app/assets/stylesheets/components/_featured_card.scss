@@ -20,7 +20,7 @@
 }
 
 .song-category {
-  flex-basis: 40%;
+  flex-basis: 45%;
 }
 
 .song-category-name {
@@ -48,4 +48,9 @@
 .player-iframe h2 {
   font-size: 24px;
   padding-bottom: 20px;
+}
+
+.switch-player {
+  display: block;
+  text-align: center;
 }
