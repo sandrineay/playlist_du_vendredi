@@ -17,11 +17,15 @@ ActiveRecord::Schema.define(version: 2019_03_03_122334) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "authorings", force: :cascade do |t|
     t.bigint "song_id"
     t.bigint "artist_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["artist_id"], name: "index_authorings_on_artist_id"
     t.index ["song_id"], name: "index_authorings_on_song_id"
   end
@@ -30,6 +34,8 @@ ActiveRecord::Schema.define(version: 2019_03_03_122334) do
     t.bigint "playlist_id"
     t.bigint "category_id"
     t.bigint "song_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_belongings_on_category_id"
     t.index ["playlist_id"], name: "index_belongings_on_playlist_id"
     t.index ["song_id"], name: "index_belongings_on_song_id"
@@ -37,16 +43,22 @@ ActiveRecord::Schema.define(version: 2019_03_03_122334) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "playlists", force: :cascade do |t|
     t.string "title"
     t.boolean "featured"
     t.boolean "special"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "songs", force: :cascade do |t|
     t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -4,6 +4,8 @@ class CreateBelongings < ActiveRecord::Migration[5.2]
       t.references :playlist, foreign_key: true
       t.references :category, foreign_key: true
       t.references :song, foreign_key: true
+
+      t.timestamps
     end
   end
 end

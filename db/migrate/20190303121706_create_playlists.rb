@@ -4,6 +4,8 @@ class CreatePlaylists < ActiveRecord::Migration[5.2]
       t.string :title
       t.boolean :featured
       t.boolean :special
+
+      t.timestamps
     end
   end
 end
