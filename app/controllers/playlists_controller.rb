@@ -1,6 +1,6 @@
 class PlaylistsController < ApplicationController
   def index
-    @playlists = Playlist.where(special: false)
+    @playlists = Playlist.all
   end
 
   def show
