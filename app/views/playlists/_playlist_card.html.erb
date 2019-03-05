@@ -1,0 +1,9 @@
+<%= link_to playlist_path(playlist), class: "playlist-card-link" do %>
+  <div class="playlist-card">
+    <div class="playlist-card-hover">
+      <i class="far fa-play-circle"></i>
+    </div>
+    <%= image_tag "https://api.deezer.com/playlist/#{playlist.deezer_id}/image?size=big" %>
+    <p><%= playlist.title %></p>
+  </div>
+<% end %>

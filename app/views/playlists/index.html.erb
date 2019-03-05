@@ -1,19 +1,9 @@
-<div class="container playlists">
-  <h2>Toutes nos playlists ⚡️</h2>
+<div class="container playlists mt-40">
+  <h2>Toutes nos playlists 💫</h2>
 
-  <div class="row">
+  <div class="playlist-grid mt-40">
     <% @playlists.each do |playlist| %>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <%= link_to playlist_path(playlist), class: "playlist-card-link" do %>
-          <div class="playlist-card">
-            <div class="playlist-card-hover">
-              <i class="far fa-play-circle"></i>
-            </div>
-            <%= image_tag "https://api.deezer.com/playlist/#{playlist.deezer_id}/image?size=big" %>
-            <p><%= playlist.title %></p>
-          </div>
-        <% end %>
-      </div>
+      <%= render 'playlists/playlist_card', playlist: playlist %>
     <% end %>
   </div>
 </div>

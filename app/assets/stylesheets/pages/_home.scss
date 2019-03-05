@@ -1,18 +1,3 @@
-.playlists h2 {
-  font-weight: bold;
-  font-size: 32px;
-  margin-bottom: 40px;
-  @media (max-width: 576px) {
-    font-size: 28px;
-  }
-}
-
-.playlist-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .grey-wrapper {
   background-color: rgb(10,10,10);
   padding: 20px 0;
