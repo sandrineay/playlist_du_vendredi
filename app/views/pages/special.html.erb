@@ -1,1 +1,9 @@
-<h1>Hors séries</h1>
+<div class="container playlists mt-80">
+  <h2>Les Hors-Séries 🔥</h2>
+
+  <div class="playlist-grid mt-20">
+    <% @playlists.each do |playlist| %>
+      <%= render 'playlists/playlist_card', playlist: playlist %>
+    <% end %>
+  </div>
+</div>

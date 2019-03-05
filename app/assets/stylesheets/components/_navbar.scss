@@ -16,8 +16,14 @@
 /* Logo */
 .navbar-logo {
   background-image: url('https://raw.githubusercontent.com/sandrineay/pdv-images/master/logo.png');
+  transition: background-image 0.5s ease;
+  background-size: 40px;
+  background-repeat: no-repeat;
   height: 40px;
   width: 40px;
+  &:hover {
+    background-image: url('https://raw.githubusercontent.com/sandrineay/pdv-images/master/logo-pink.png');
+  }
 }
 
 /* Right section */

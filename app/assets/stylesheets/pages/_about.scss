@@ -1,0 +1,16 @@
+.team-intro {
+  margin: 60px 0;
+  font-weight: lighter;
+  font-size: 16px;
+  a {
+    color: #f36a7b;
+    &:hover {
+      text-decoration: none;
+      opacity: 0.6;
+    }
+  }
+}
+
+.avatar-size {
+  width: 100px;
+}
