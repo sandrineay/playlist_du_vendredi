@@ -26,19 +26,22 @@
       </div>
     </div>
   </div>
-
-  <div class="playlists mt-40">
-    <h2>Encore plus de playlists <i class="fas fa-hand-point-down"></i></h2>
-    <div class="playlist-grid mt-40">
-      <% @latest_playlists.each do |playlist| %>
-        <div class="playlist-card">
-          <div class="playlist-card-hover">
-            <i class="far fa-play-circle"></i>
+</div>
+<div class="grey-wrapper">
+  <div class="container">
+    <div class="playlists mt-40">
+      <h2>Encore plus de playlists <i class="fas fa-hand-point-down"></i></h2>
+      <div class="playlist-grid mt-40">
+        <% @latest_playlists.each do |playlist| %>
+          <div class="playlist-card">
+            <div class="playlist-card-hover">
+              <i class="far fa-play-circle"></i>
+            </div>
+            <%= image_tag "https://api.deezer.com/playlist/#{playlist.deezer_id}/image?size=big" %>
+            <p><%= playlist.title %></p>
           </div>
-          <%= image_tag "https://api.deezer.com/playlist/#{playlist.deezer_id}/image?size=big" %>
-          <p><%= playlist.title %></p>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

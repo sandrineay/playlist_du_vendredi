@@ -1,0 +1,22 @@
+#footer-pdv {
+  padding: 20px 0 50px 0;
+  background-color: rgb(20,20,20);
+}
+
+#footer-pdv h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.music-logos {
+  display: flex;
+  width: 90px;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    color: white;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
