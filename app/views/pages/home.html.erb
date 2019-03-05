@@ -14,7 +14,7 @@
         </div>
       <% end %>
     </div>
-    <div class="players mt-80">
+    <div class="players mt-60">
       <div class="player-iframes">
         <div class="player-iframe">
           <h2 class="text-center">Ouvre grand tes esgourdes <i class="fas fa-music"></i></h2>
@@ -24,9 +24,15 @@
     </div>
   </div>
 
-  <div class="playlists">
-    <% @latest_playlists.each do |playlist| %>
-      <%= playlist.title %>
-    <% end %>
+  <div class="playlists mt-60">
+    <h2>Encore plus de playlists <i class="fas fa-hand-point-down"></i></h2>
+    <div class="mt-50">
+      <% @latest_playlists.each do |playlist| %>
+        <div class="playlist-card">
+          <%= image_tag "https://api.deezer.com/playlist/#{playlist.deezer_id}/image?size=big" %>
+          <%= playlist.title %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

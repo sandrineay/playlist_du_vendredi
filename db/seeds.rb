@@ -49,8 +49,15 @@ Authoring.create(song: Song.find_by(title: "Happy Birthday, Johnny - piano versi
 puts "#{Authoring.count} connexions created between songs and artists."
 
 # Create playlists
-Playlist.create(title: "La Playlist du Vendredi #1", featured: false, special: false, deezer_id: "5132316144", spotify_link: "https://open.spotify.com/playlist/67th0j6iVijwFYVb435eGu")
-playlist2 = Playlist.create(title: "La Playlist du Vendredi #2", featured: true, special: false, deezer_id: "5159360524", spotify_link: "https://open.spotify.com/playlist/1nXiRFgarZ88Arf85kz9Gf")
+Playlist.create(
+  title: "La Playlist du Vendredi #1",
+  featured: false,
+  special: false,
+  deezer_id: "5132316144",
+  spotify_link: "https://open.spotify.com/playlist/67th0j6iVijwFYVb435eGu",
+  description: "A tous les amateurs de musique, bonne écoute! 😌"
+  )
+playlist2 = Playlist.create(title: "La Playlist du Vendredi #2", featured: false, special: false, deezer_id: "5159360524", spotify_link: "https://open.spotify.com/playlist/1nXiRFgarZ88Arf85kz9Gf")
 puts "#{Playlist.count} playlists created."
 
 # Create categories
@@ -107,6 +114,24 @@ Belonging.create(song: Song.find_by(title: "MmmBop"), category: Category.find_by
 Belonging.create(song: Song.find_by(title: "You & Me"), category: Category.find_by(name: "Le Friday Night Fever"), playlist: playlist2)
 Belonging.create(song: Song.find_by(title: "Future Hates Me"), category: Category.find_by(name: "L’Uptodate #2"), playlist: playlist2)
 puts "#{Belonging.count} connexions created between songs, #{Category.count} categories and #{Playlist.count} playlists."
+
+# Playlists
+
+puts "Creating Playlist #3."
+playlist3 = Playlist.create(title: "La Playlist du Vendredi #3", featured: false, special: false, deezer_id: "5188594344", spotify_link: "https://open.spotify.com/playlist/2hDKWbkXmeVdzKymUUWNSz")
+puts "Creating Playlist #4."
+playlist3 = Playlist.create(title: "La Playlist du Vendredi #4", featured: false, special: false, deezer_id: "5213886284", spotify_link: "https://open.spotify.com/playlist/0B7E6AkrvaAXjHImtUfJyd")
+puts "Creating Playlist #5."
+playlist3 = Playlist.create(title: "La Playlist du Vendredi #5", featured: true, special: false, deezer_id: "5298910202", spotify_link: "https://open.spotify.com/playlist/6Ia5Ro3ccoOQTgYExFmuX3")
+
+puts "#{Playlist.count} playlists created."
+
+
+
+
+
+
+
 
 
 
