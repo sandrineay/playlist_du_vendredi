@@ -49,8 +49,8 @@ Authoring.create(song: Song.find_by(title: "Happy Birthday, Johnny - piano versi
 puts "#{Authoring.count} connexions created between songs and artists."
 
 # Create playlists
-Playlist.create(title: "La Playlist du Vendredi #1", featured: false, special: false)
-playlist2 = Playlist.create(title: "La Playlist du Vendredi #2", featured: true, special: false)
+Playlist.create(title: "La Playlist du Vendredi #1", featured: false, special: false, deezer_id: "5132316144", spotify_link: "https://open.spotify.com/playlist/67th0j6iVijwFYVb435eGu")
+playlist2 = Playlist.create(title: "La Playlist du Vendredi #2", featured: true, special: false, deezer_id: "5159360524", spotify_link: "https://open.spotify.com/playlist/1nXiRFgarZ88Arf85kz9Gf")
 puts "#{Playlist.count} playlists created."
 
 # Create categories

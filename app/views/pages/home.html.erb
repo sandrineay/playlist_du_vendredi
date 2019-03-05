@@ -17,9 +17,8 @@
     <div class="players mt-80">
       <div class="player-iframes">
         <div class="player-iframe">
-          <h2 class="text-center">Ecoute avec Deezer</i></h2>
-          <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=playlist&id=5159360524&app_id=1" width="300" height="300"></iframe>
-          <a href="https://open.spotify.com/playlist/1nXiRFgarZ88Arf85kz9Gf" class="switch-player" target="_blank">👉 ou Spotify!</a>
+          <h2 class="text-center">Ouvre grand tes esgourdes <i class="fas fa-music"></i></h2>
+          <iframe scrolling="no" frameborder="0" allowTransparency="true" width="300" height="300" src=<%="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=playlist&id=#{@featured_playlist.deezer_id}&app_id=1"%> ></iframe>
         </div>
       </div>
     </div>
