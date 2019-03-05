@@ -23,6 +23,13 @@
   font-size: 16px;
 }
 
+a.playlist-card-link {
+  color: white;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .playlist-card-hover {
   opacity: 0;
   background-color: white;
