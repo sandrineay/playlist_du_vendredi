@@ -1,7 +1,10 @@
 <div class="container">
   <div class="featured-card-container mb-60">
-    <div class="featured-card mt-60">
+    <div class="featured-card mt-40">
       <h2><%= @featured_playlist.title %></h2>
+      <% if @featured_playlist.description %>
+        <p><%= @featured_playlist.description %></p>
+      <% end %>
       <% @featured_playlist.songs.each do |song| %>
         <div class="featured_playlist_song">
           <% category = song.belongings.find_by(playlist: @featured_playlist).category %>
@@ -24,13 +27,16 @@
     </div>
   </div>
 
-  <div class="playlists mt-60">
+  <div class="playlists mt-40">
     <h2>Encore plus de playlists <i class="fas fa-hand-point-down"></i></h2>
-    <div class="mt-50">
+    <div class="playlist-grid mt-50">
       <% @latest_playlists.each do |playlist| %>
         <div class="playlist-card">
+          <div class="playlist-card-hover">
+            <i class="far fa-play-circle"></i>
+          </div>
           <%= image_tag "https://api.deezer.com/playlist/#{playlist.deezer_id}/image?size=big" %>
-          <%= playlist.title %>
+          <p><%= playlist.title %></p>
         </div>
       <% end %>
     </div>
