@@ -54,6 +54,7 @@
 }
 
 .player-iframe h2 {
+  font-weight: bold;
   font-size: 24px;
   padding-bottom: 20px;
 }
@@ -66,6 +67,10 @@
   padding-top: 40px;
   &:hover {
     color: #f36a7b;
+    text-decoration: none;
+  }
+  &:focus {
+    color: white;
     text-decoration: none;
   }
 }
