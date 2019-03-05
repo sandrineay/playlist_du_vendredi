@@ -8,10 +8,10 @@
   <div class="navbar-pdv-right hidden-xs hidden-sm">
 
     <!-- Links when logged in -->
-    <%= link_to "La playlist du vendredi", root_path, class: "navbar-pdv-item navbar-pdv-link" %>
-    <%= link_to "Historique", playlists_path, class: "navbar-pdv-item navbar-pdv-link" %>
-    <%= link_to "Hors-série", hors_serie_path, class: "navbar-pdv-item navbar-pdv-link" %>
-    <%= link_to "À propos", a_propos_path, class: "navbar-pdv-item navbar-pdv-link" %>
+    <%= link_to "La playlist du vendredi", root_path, class: "navbar-pdv-item navbar-pdv-link #{'navbar-pdv-link-active' if params["controller"] == "pages" && params["action"] == "home"}" %>
+    <%= link_to "Historique", playlists_path, class: "navbar-pdv-item navbar-pdv-link #{'navbar-pdv-link-active' if params["controller"] == "playlists" && params["action"] == "index"}" %>
+    <%= link_to "Hors-série", hors_serie_path, class: "navbar-pdv-item navbar-pdv-link #{'navbar-pdv-link-active' if params["controller"] == "pages" && params["action"] == "special"}" %>
+    <%= link_to "À propos", a_propos_path, class: "navbar-pdv-item navbar-pdv-link #{'navbar-pdv-link-active' if params["controller"] == "pages" && params["action"] == "about"}" %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->

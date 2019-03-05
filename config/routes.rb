@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :playlists, only: [:index, :show]
   get '/hors-serie', to: 'pages#special'
-  get 'a-propos', to: "pages#about"
+  get '/a-propos', to: "pages#about"
 end
