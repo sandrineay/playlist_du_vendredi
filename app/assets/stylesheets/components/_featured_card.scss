@@ -54,10 +54,16 @@
   font-weight: bold;
   font-style: italic;
   letter-spacing: 1px;
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
 }
 
 .song-details {
   font-size: 16px;
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
 }
 
 .players {
@@ -77,7 +83,7 @@
 
 .player-iframe h2 {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   padding-bottom: 20px;
   @media (max-width: 576px) {
     margin-top: 60px;
