@@ -13,9 +13,6 @@
   &:hover {
     color: #f36a7b;
   }
-  @media (max-width: 576px) {
-    margin: 30px auto;
-  }
 }
 
 .playlist-card p {
@@ -56,12 +53,16 @@ a.playlist-card-link {
   font-size: 32px;
   margin-left: 30px;
   @media (max-width: 576px) {
-    font-size: 28px;
+    font-size: 25px;
+    margin-left: 0;
   }
 }
 
 .playlist-grid {
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 576px) {
+    justify-content: center
+  }
 }
 
