@@ -200,6 +200,112 @@ Belonging.create(song: Song.find_by(title: "Fight Test"), category: Category.fin
 
 puts "Playlist #5 created with #{playlist5.songs.count} songs #{playlist5.songs.map(&:artists).count} artists."
 
+# Special playlist #1
+
+special_playlist1 = Playlist.create(
+  title: "Le Hors Série du Vendredi #1 - Christmas",
+  featured: false,
+  special: true,
+  deezer_uid: "5240513302",
+  spotify_link: "https://open.spotify.com/playlist/1nGNh7sL2SbvS0pBgxEyHW"
+)
+
+Authoring.create(song: Song.create(title: "Jingle Bells"), artist: Artist.create(name: "Frank Sinatra"))
+Authoring.create(song: Song.create(title: "Baby, It's Cold Outside"), artist: Artist.create(name: "She & Him"))
+Authoring.create(song: Song.create(title: "White Winter Hymnal"), artist: Artist.create(name: "Fleet Foxes"))
+Authoring.create(song: Song.create(title: "La Fille Du Père Noël"), artist: Artist.create(name: "Jacques Dutronc"))
+Authoring.create(song: Song.create(title: "White Christmas"), artist: Artist.create(name: "Elvis Presley"))
+Authoring.create(song: Song.create(title: "Santa Claus Is Comin' To Town"), artist: Artist.create(name: "Bruce Springsteen"))
+Authoring.create(song: Song.create(title: "Silent Night"), artist: Artist.create(name: "Sufjan Stevens"))
+Authoring.create(song: Song.create(title: "Christmas Is Going To The Dogs"), artist: Artist.create(name: "Eels"))
+Authoring.create(song: Song.create(title: "I Wish It Was Christmas Today"), artist: Artist.create(name: "Julian Casablancas"))
+Authoring.create(song: Song.create(title: "Christmas (Baby Please Come Home)"), artist: Artist.create(name: "U2"))
+Authoring.create(song: Song.create(title: "The Little Drummer Boy"), artist: Artist.create(name: "Johnny Cash"))
+Authoring.create(song: Song.create(title: "Maybe This Christmas"), artist: Artist.create(name: "Ron Sexsmith"))
+Authoring.create(song: Song.create(title: "Last Christmas"), artist: Artist.create(name: "Wham!"))
+Authoring.create(song: Song.create(title: "Carol Of The Bells"), artist: Artist.create(name: "Wishing On A Star"))
+
+Belonging.create(song: Song.find_by(title: "Jingle Bells"), playlist: special_playlist1)
+Belonging.create(song: Song.find_by(title: "Baby, It's Cold Outside"), playlist: special_playlist1)
+Belonging.create(song: Song.find_by(title: "White Winter Hymnal"), playlist: special_playlist1)
+Belonging.create(song: Song.find_by(title: "La Fille Du Père Noël"), playlist: special_playlist1)
+Belonging.create(song: Song.find_by(title: "White Christmas"), playlist: special_playlist1)
+Belonging.create(song: Song.find_by(title: "Santa Claus Is Comin' To Town"), playlist: special_playlist1)
+Belonging.create(song: Song.find_by(title: "Silent Night"), playlist: special_playlist1)
+Belonging.create(song: Song.find_by(title: "Christmas Is Going To The Dogs"), playlist: special_playlist1)
+Belonging.create(song: Song.find_by(title: "I Wish It Was Christmas Today"), playlist: special_playlist1)
+Belonging.create(song: Song.find_by(title: "Christmas (Baby Please Come Home)"), playlist: special_playlist1)
+Belonging.create(song: Song.find_by(title: "The Little Drummer Boy"), playlist: special_playlist1)
+Belonging.create(song: Song.find_by(title: "Maybe This Christmas"), playlist: special_playlist1)
+Belonging.create(song: Song.find_by(title: "Last Christmas"), playlist: special_playlist1)
+Belonging.create(song: Song.find_by(title: "Carol Of The Bells"), playlist: special_playlist1)
+
+puts "#{Playlist.where(special: true).count} special playlists created."
+
+special_playlist2 = Playlist.create(
+  title: "Le Hors Série du Vendredi #2 - Bowie",
+  featured: false,
+  special: true,
+  deezer_uid: "5325430302",
+  spotify_link: "https://open.spotify.com/playlist/0Gf1FWGE5O3I2v6SVxEy8P"
+)
+
+bowie = Artist.create(name: "David Bowie")
+
+Authoring.create(song: Song.create(title: "Memory Of A Free Festival"), artist: bowie)
+Authoring.create(song: Song.create(title: "The Width Of A Circle"), artist: bowie)
+Authoring.create(song: Song.create(title: "Oh! You Pretty Things"), artist: bowie)
+Authoring.create(song: Song.create(title: "Time"), artist: bowie)
+Authoring.create(song: Song.create(title: "Diamond Dogs"), artist: bowie)
+Authoring.create(song: Song.create(title: "Station To Station"), artist: bowie)
+Authoring.create(song: Song.create(title: "Sound And Vision"), artist: bowie)
+Authoring.create(song: Song.create(title: "A New Career In A New Town"), artist: bowie)
+Authoring.create(song: Song.create(title: "Beauty And The Beast"), artist: bowie)
+Authoring.create(song: Song.create(title: "Look Back In Anger"), artist: bowie)
+Authoring.create(song: Song.create(title: "Scary Monsters (And Super Creeps)"), artist: bowie)
+Authoring.create(song: Song.create(title: "Heaven's In Here"), artist: bowie)
+Authoring.create(song: Song.create(title: "The Hearts Filthy Lesson"), artist: bowie)
+Authoring.create(song: Song.create(title: "Valentine's Day"), artist: bowie)
+Authoring.create(song: Song.create(title: "Rock'N'Roll Suicide"), artist: bowie)
+
+Belonging.create(song: Song.find_by(title: "Memory Of A Free Festival"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "The Width Of A Circle"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "Oh! You Pretty Things"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "Time"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "Diamond Dogs"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "Station To Station"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "Sound And Vision"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "A New Career In A New Town"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "Beauty And The Beast"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "Look Back In Anger"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "Scary Monsters (And Super Creeps)"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "Heaven's In Here"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "The Hearts Filthy Lesson"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "Valentine's Day"), playlist: special_playlist2)
+Belonging.create(song: Song.find_by(title: "Rock'N'Roll Suicide"), playlist: special_playlist2)
+
+# Authoring.create(song: Song.create(title: ""), artist: Artist.create(name: ""))
+# Authoring.create(song: Song.create(title: ""), artist: Artist.create(name: ""))
+# Authoring.create(song: Song.create(title: ""), artist: Artist.create(name: ""))
+# Authoring.create(song: Song.create(title: ""), artist: Artist.create(name: ""))
+# Authoring.create(song: Song.create(title: ""), artist: Artist.create(name: ""))
+# Authoring.create(song: Song.create(title: ""), artist: Artist.create(name: ""))
+# Authoring.create(song: Song.create(title: ""), artist: Artist.create(name: ""))
+# Authoring.create(song: Song.create(title: ""), artist: Artist.create(name: ""))
+# Authoring.create(song: Song.create(title: ""), artist: Artist.create(name: ""))
+# Authoring.create(song: Song.create(title: ""), artist: Artist.create(name: ""))
+
+# Belonging.create(song: Song.find_by(title: ""), playlist: playlist4)
+# Belonging.create(song: Song.find_by(title: ""), playlist: playlist4)
+# Belonging.create(song: Song.find_by(title: ""), playlist: playlist4)
+# Belonging.create(song: Song.find_by(title: ""), playlist: playlist4)
+# Belonging.create(song: Song.find_by(title: ""), playlist: playlist4)
+# Belonging.create(song: Song.find_by(title: ""), playlist: playlist4)
+# Belonging.create(song: Song.find_by(title: ""), playlist: playlist4)
+# Belonging.create(song: Song.find_by(title: ""), playlist: playlist4)
+# Belonging.create(song: Song.find_by(title: ""), playlist: playlist4)
+# Belonging.create(song: Song.find_by(title: ""), playlist: playlist4)
+
 # Playlist #4
 # puts "Filling up Playlist #4."
 

@@ -9,7 +9,9 @@
         <% playlist.songs.each do |song| %>
             <% category = song.belongings.find_by(playlist: playlist).category %>
             <tr class="playlist_song">
-              <td class="playlist_song_category"><%= category.emoji %><span class="ml-20 song-category-name hidden-xs"><%= category.name %></span></td>
+              <% if category %>
+                <td class="playlist_song_category"><%= category.emoji %><span class="ml-20 song-category-name hidden-xs"><%= category.name %></span></td>
+              <% end %>
               <td class="playlist_song_details"><%= song.title %> <span class="text-italic-light">by</span> <%= song.artists.map(&:name).join(', ') %></td>
             </tr>
         <% end %>
