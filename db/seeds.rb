@@ -28,7 +28,7 @@ playlist1 = Playlist.create(
   title: "La Playlist du Vendredi #1",
   featured: false,
   special: false,
-  deezer_id: "5132316144",
+  deezer_uid: "5132316144",
   spotify_link: "https://open.spotify.com/playlist/67th0j6iVijwFYVb435eGu",
   description: "A tous les amateurs de musique, bonne écoute! 😌"
 )
@@ -36,14 +36,14 @@ playlist2 = Playlist.create(
   title: "La Playlist du Vendredi #2",
   featured: false,
   special: false,
-  deezer_id: "5159360524",
+  deezer_uid: "5159360524",
   spotify_link: "https://open.spotify.com/playlist/1nXiRFgarZ88Arf85kz9Gf"
 )
 playlist3 = Playlist.create(
   title: "La Playlist du Vendredi #3",
   featured: false,
   special: false,
-  deezer_id: "5188594344",
+  deezer_uid: "5188594344",
   spotify_link: "https://open.spotify.com/playlist/2hDKWbkXmeVdzKymUUWNSz",
   description: "Ce vendredi est marqué par la triste disparition de Pete Shelley, fondateur des Buzzcocks, groupe emblématique de la vague Punk fin des années 70. Du coup, on lui dédie notre hit du grenier."
 )
@@ -51,14 +51,14 @@ playlist4 = Playlist.create(
   title: "La Playlist du Vendredi #4",
   featured: false,
   special: false,
-  deezer_id: "5213886284",
+  deezer_uid: "5213886284",
   spotify_link: "https://open.spotify.com/playlist/0B7E6AkrvaAXjHImtUfJyd"
 )
 playlist5 = Playlist.create(
   title: "La Playlist du Vendredi #5",
   featured: true,
   special: false,
-  deezer_id: "5298910202",
+  deezer_uid: "5298910202",
   spotify_link: "https://open.spotify.com/playlist/6Ia5Ro3ccoOQTgYExFmuX3"
 )
 puts "#{Playlist.count} playlists created."

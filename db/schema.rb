@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 2019_03_07_204604) do
     t.boolean "special"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "deezer_id"
+    t.string "deezer_uid"
     t.string "spotify_link"
     t.string "description"
   end
