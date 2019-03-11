@@ -2,3 +2,7 @@ body {
   background: rgb(0,0,0);
   color: rgb(240,240,240);
 }
+
+.app-content {
+  min-height: calc(100vh - 231.5px)
+}
