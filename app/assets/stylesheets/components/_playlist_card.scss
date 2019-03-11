@@ -1,11 +1,9 @@
 .playlist-card img {
   display: block;
   width: 298px;
-  margin-bottom: 20px;
 }
 
 .playlist-card {
-  position: relative;
   margin: 20px 30px;
   display: flex;
   flex-direction: column;
@@ -15,9 +13,14 @@
   }
 }
 
+.playlist-card-img {
+  position: relative
+}
+
 .playlist-card p {
   font-weight: bold;
   font-size: 16px;
+  margin-top: 20px;
 }
 
 a.playlist-card-link {
@@ -33,7 +36,7 @@ a.playlist-card-link {
   background-color: white;
   position: absolute;
   top: 0;
-  bottom: 55px;
+  bottom: 0;
   left: 0;
   right: 0;
   display: flex;

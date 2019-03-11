@@ -2,3 +2,18 @@
   background-color: rgb(10,10,10);
   padding: 20px 0;
 }
+
+p.playlist-index-link {
+  margin-top: 40px;
+  margin-left: 30px;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.playlist-index-link a {
+  color: #f36a7b;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.7;
+  }
+}
