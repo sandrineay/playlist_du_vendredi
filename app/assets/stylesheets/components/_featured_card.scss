@@ -9,7 +9,6 @@
   h2 {
     font-weight: bold;
     font-size: 40px;
-    margin-bottom: 40px;
   }
   @media (max-width: 576px) {
     h2 {
@@ -87,5 +86,12 @@ td.playlist_song_details {
   @media (max-width: 576px) {
     margin-top: 60px;
   }
+}
+
+p.featured-playlist-date {
+  font-weight: lighter;
+  opacity: 0.3;
+  font-size: 16px;
+  margin-bottom: 40px;
 }
 
