@@ -30,14 +30,16 @@ playlist1 = Playlist.create(
   special: false,
   deezer_uid: "5132316144",
   spotify_link: "https://open.spotify.com/playlist/67th0j6iVijwFYVb435eGu",
-  description: "A tous les amateurs de musique, bonne écoute! 😌"
+  description: "A tous les amateurs de musique, bonne écoute! 😌",
+  playlist_date: "Vendredi 23 novembre 2018"
 )
 playlist2 = Playlist.create(
   title: "La Playlist du Vendredi #2",
   featured: false,
   special: false,
   deezer_uid: "5159360524",
-  spotify_link: "https://open.spotify.com/playlist/1nXiRFgarZ88Arf85kz9Gf"
+  spotify_link: "https://open.spotify.com/playlist/1nXiRFgarZ88Arf85kz9Gf",
+  playlist_date: "Vendredi 30 novembre 2018"
 )
 playlist3 = Playlist.create(
   title: "La Playlist du Vendredi #3",
@@ -45,21 +47,24 @@ playlist3 = Playlist.create(
   special: false,
   deezer_uid: "5188594344",
   spotify_link: "https://open.spotify.com/playlist/2hDKWbkXmeVdzKymUUWNSz",
-  description: "Ce vendredi est marqué par la triste disparition de Pete Shelley, fondateur des Buzzcocks, groupe emblématique de la vague Punk fin des années 70. Du coup, on lui dédie notre hit du grenier."
+  description: "Ce vendredi est marqué par la triste disparition de Pete Shelley, fondateur des Buzzcocks, groupe emblématique de la vague Punk fin des années 70. Du coup, on lui dédie notre hit du grenier.",
+  playlist_date: "Vendredi 7 décembre 2018"
 )
 playlist4 = Playlist.create(
   title: "La Playlist du Vendredi #4",
   featured: false,
   special: false,
   deezer_uid: "5213886284",
-  spotify_link: "https://open.spotify.com/playlist/0B7E6AkrvaAXjHImtUfJyd"
+  spotify_link: "https://open.spotify.com/playlist/0B7E6AkrvaAXjHImtUfJyd",
+  playlist_date: "Vendredi 14 décembre 2018"
 )
 playlist5 = Playlist.create(
   title: "La Playlist du Vendredi #5",
   featured: true,
   special: false,
   deezer_uid: "5298910202",
-  spotify_link: "https://open.spotify.com/playlist/6Ia5Ro3ccoOQTgYExFmuX3"
+  spotify_link: "https://open.spotify.com/playlist/6Ia5Ro3ccoOQTgYExFmuX3",
+  playlist_date: "Vendredi 4 janvier 2019"
 )
 puts "#{Playlist.count} playlists created."
 
@@ -207,7 +212,8 @@ special_playlist1 = Playlist.create(
   featured: false,
   special: true,
   deezer_uid: "5240513302",
-  spotify_link: "https://open.spotify.com/playlist/1nGNh7sL2SbvS0pBgxEyHW"
+  spotify_link: "https://open.spotify.com/playlist/1nGNh7sL2SbvS0pBgxEyHW",
+  playlist_date: "Vendredi 21 décembre 2018"
 )
 
 Authoring.create(song: Song.create(title: "Jingle Bells"), artist: Artist.create(name: "Frank Sinatra"))
@@ -247,7 +253,8 @@ special_playlist2 = Playlist.create(
   featured: false,
   special: true,
   deezer_uid: "5325430302",
-  spotify_link: "https://open.spotify.com/playlist/0Gf1FWGE5O3I2v6SVxEy8P"
+  spotify_link: "https://open.spotify.com/playlist/0Gf1FWGE5O3I2v6SVxEy8P",
+  playlist_date: "Vendredi 11 janvier 2019"
 )
 
 bowie = Artist.create(name: "David Bowie")

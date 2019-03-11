@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_07_204604) do
+ActiveRecord::Schema.define(version: 2019_03_11_184418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2019_03_07_204604) do
     t.string "deezer_uid"
     t.string "spotify_link"
     t.string "description"
+    t.string "playlist_date"
   end
 
   create_table "songs", force: :cascade do |t|
