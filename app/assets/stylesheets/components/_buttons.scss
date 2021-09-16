@@ -1,0 +1,14 @@
+.btn-pink {
+  color:            white;
+  background-color: $pink;
+  border-radius:    4px;
+  font-weight:      bold;
+  padding:          8px 10px;
+  font-size:        14px;
+  margin-left:      20px;
+
+  &:hover {
+    color:           white;
+    text-decoration: none;
+  }
+}
