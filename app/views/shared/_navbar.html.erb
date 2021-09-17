@@ -15,6 +15,7 @@
         <%= link_to "Historique", playlists_path, class: "navbar-pdv-item navbar-pdv-link #{'navbar-pdv-link-active' if params["controller"] == "playlists" && params["action"] == "index"}" %>
         <%= link_to "Hors-série", hors_serie_path, class: "navbar-pdv-item navbar-pdv-link #{'navbar-pdv-link-active' if params["controller"] == "pages" && params["action"] == "special"}" %>
         <%= link_to "À propos", a_propos_path, class: "navbar-pdv-item navbar-pdv-link #{'navbar-pdv-link-active' if params["controller"] == "pages" && params["action"] == "about"}" %>
+        <%= link_to "Spotify", "https://open.spotify.com/user/w5azliprnz2bzz9ifkuodxbgj", target: '_blank', class: 'btn-pink' %>
       </div>
 
       <!-- Dropdown list appearing on mobile only -->
